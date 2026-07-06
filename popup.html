@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Declutter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<!-- heading -->
+  <body class="page">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M11 12l-2 4h4l-2 4"/></svg>
+        </div>
+        <div>
+          <div class="brand-name">DeClutter</div>
+          <div class="brand-sub">One-click page summaries</div>
+        </div>
+      </div>
+    </header>
+  
+<!-- current open tab -->
+<section class="tab-card">
+      <div class="tab-favicon" id="favicon">🗂</div>
+      <div class="tab-meta">
+        <div class="tab-title" id="tabTitle">Loading tab…</div>
+        <div class="tab-url" id="tabUrl"></div>
+      </div>
+</section>
+
+<!-- summery lenght -->
+<div class="length-row">
+      <label class="length-label">Length</label>
+      <div class="segmented" id="length">
+        <button data-value="short" class="seg-btn">Short</button>
+        <button data-value="medium" class="seg-btn active">Medium</button>
+        <button data-value="long" class="seg-btn">Long</button>
+      </div>
+</div>
+<!-- Submit -->
+    <button id="summarize" class="primary-btn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg>
+      Summarize all tabs
+    </button>
+
+</body>
+</html>
