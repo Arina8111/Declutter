@@ -2,36 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Summary Library — TabSummarizer</title>
+    <title>Summary Library — DeClutter</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page page-lib">
-    <header class="lib-header">
-      <div class="brand">
+  <body class="library-page">
+    <main class="library-wrap">
+      <header class="brand library-brand">
         <div class="brand-mark">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M11 12l-2 4h4l-2 4"/></svg>
+          <img src="icon.png" alt="" width="36" height="36" />
         </div>
-        <div>
-          <div class="brand-name">Summary Library</div>
-        </div>
-      </div>
-      <!-- <div class="lib-actions">
-        <input id="search" class="search-input" placeholder="Search summaries…" />
-        <button id="clearAll" class="chip chip-danger">Clear all</button>
-      </div> -->
-    </header>
+        <h1>Summary Library</h1>
+        <button id="clear-btn" class="btn-ghost" title="Clear all summaries">Clear all</button>
+      </header>
 
-    <main class="lib-body">
-      <ul id="list" class="lib-list"></ul>
+      <section id="empty" class="empty" hidden>
+        <h3>Summery heading</h3>
+        <p>Summery Content</p>
+      </section>
 
-      <div id="libEmpty" class="lib-empty hidden">
-        <div class="empty-glyph large">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h16"/></svg>
-        </div>
-        <div class="empty-title">Nothing here yet</div>
-        <div class="empty-sub">Open the extension on any tab and save a summary.</div>
-      </div>
+      <section id="list" class="list"></section>
     </main>
-
   </body>
 </html>
