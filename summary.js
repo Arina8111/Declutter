@@ -11,8 +11,20 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         newPara.className="summary";
         newPara.textContent=message.content_data["content"]
         const goToTab=document.createElement('a')
-        goToTab.href=message.content_data["tabUrl"]
-        goToTab.textContent="go to tab"
+        goToTab.href="#"
+        goToTab.textContent="Go to tab"
+        goToTab.addEventListener("click", async (event) => {
+            event.preventDefault()
+            const [tab] = await chrome.tabs.query({
+                currentWindow: true,
+                url: message.content_data["tabUrl"],
+            })
+
+            if (tab) {
+                await chrome.tabs.update(tab.id, { active: true })
+                await chrome.windows.update(tab.windowId, { focused: true })
+            }
+        })
         loading.remove()
         newDiv.appendChild(newTitle)
         newDiv.appendChild(newPara)
